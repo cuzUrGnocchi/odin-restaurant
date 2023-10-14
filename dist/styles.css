@@ -1,0 +1,71 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Lucida Console';
+}
+
+* {
+  --img-size: 175px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+}
+
+.title {
+  align-self: center;
+  margin: 20px 0;
+
+  font-size: 30px;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 385px));
+  row-gap: 50px;
+
+  margin: 15px 20px 0;
+
+  justify-content: center;
+  justify-items: center;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: 125px 125px;
+  grid-template-columns: 350px;
+
+  text-align: justify;
+}
+
+.card > img {
+  height: 125px;
+  width: 350px;
+
+  object-fit: cover;
+}
+
+.text {
+  display: flex;
+  flex-direction: column; 
+  
+  padding: 0 7.5px;
+}
+
+.name {
+  margin: 10px 0 5px;
+}
+
+.description {
+  flex: 1;
+}
+
+.shoutout {
+  align-self: end;
+  
+  font-size: 12px;
+}
