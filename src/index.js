@@ -1,8 +1,9 @@
-import populateMenu from './menu';
+import createMenu from './menu';
 import initialMenu from '../dist/initial-menu.json';
 
 function init() {
-  populateMenu(initialMenu.menu);
+  const menu = createMenu(initialMenu.menu);
+  document.body.appendChild(menu);
 }
 
 init();
