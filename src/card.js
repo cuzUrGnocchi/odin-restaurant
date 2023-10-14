@@ -1,3 +1,5 @@
+import './style.css';
+
 function createCard(item) {
   const card = document.createElement('div');
   const img = document.createElement('img');
