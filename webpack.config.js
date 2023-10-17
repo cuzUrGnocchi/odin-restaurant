@@ -5,6 +5,12 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
+    card: './src/card.js',
+    contactList: './src/contactList.js',
+    contactPage: './src/contactPage.js',
+    icon: './src/icon.js',
+    menu: './src/menu.js',
+    navigationTab: './src/navigationTab.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
