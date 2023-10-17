@@ -13,12 +13,20 @@ module.exports = {
   ],
   devtool: 'inline-source-map',
   devServer: {
+    devMiddleware: {
+      index: true,
+      mimeTypes: { phtml: 'text/html' },
+      publicPath: '/dist',
+      serverSideRender: true,
+      writeToDisk: true,
+    },
     static: './dist',
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist', 'views'),
+    path: path.resolve(__dirname, 'dist'),
     clean: true,
+    publicPath: '/',
   },
   module: {
     rules: [
