@@ -21,7 +21,11 @@ module.exports = {
   devServer: {
     devMiddleware: {
       index: true,
-      mimeTypes: { phtml: 'text/html' },
+      mimeTypes: {
+        phtml: 'text/html',
+        jpg: 'image/jpg',
+        svg: 'image/svg',
+      },
       publicPath: '/dist',
       serverSideRender: true,
       writeToDisk: true,
