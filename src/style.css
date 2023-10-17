@@ -1,7 +1,6 @@
 *, *::before, *::after {
   margin: 0;
   padding: 0;
-
   font-family: 'Lucida Console';
 }
 
@@ -12,47 +11,51 @@
 body {
   display: flex;
   flex-direction: column;
-
   width: 100vw;
 }
 
-.title {
-  align-self: center;
-  margin: 20px 0;
+nav {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
 
+nav > div {
+  width: 150px;
+  margin: 20px 0;
   font-size: 30px;
+  text-align: center;
+}
+
+.link {
+  cursor: pointer;
 }
 
 .menu {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 385px));
   row-gap: 50px;
-
-  margin: 15px 20px 0;
-
   justify-content: center;
   justify-items: center;
+  margin: 15px 20px 0;
 }
 
 .card {
   display: grid;
   grid-template-rows: 125px 125px;
   grid-template-columns: 350px;
-
   text-align: justify;
 }
 
 .card > img {
   height: 125px;
   width: 350px;
-
   object-fit: cover;
 }
 
 .text {
   display: flex;
   flex-direction: column; 
-  
   padding: 0 7.5px;
 }
 
@@ -64,8 +67,53 @@ body {
   flex: 1;
 }
 
-.shoutout {
+.credit {
   align-self: end;
-  
   font-size: 12px;
+}
+
+.contact-page {
+  width: 400px;
+  margin: 15px auto 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-media {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.contact-page > hr {
+  margin: 15px 2px 25px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.contact-list {
+  padding: 0 15px;
+  align-self: center;
+}
+
+tr > td {
+  width: 165px;
+  vertical-align: text-top;
+}
+
+tr > td:first-of-type {
+  padding-right: 20px;
+  text-align: right;
+}
+
+tr > td:last-of-type {
+  padding-left: 20px;
+  text-align: justify;
+}
+
+tr:not(:last-of-type) > td {
+  padding-bottom: 25px;
 }

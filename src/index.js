@@ -1,15 +1,31 @@
+import createNavigationTab from './navigationTab';
 import createMenu from './menu';
-import INITIAL_MENU from './initialMenu';
+import PLACEHOLDER from './resources/placeholder';
+import createContacts from './contactPage';
 
 function init() {
-  const title = document.createElement('h1');
-  const menu = createMenu(INITIAL_MENU);
+  const content = document.createElement('div');
 
-  document.body.appendChild(title);
-  document.body.appendChild(menu);
+  function invokeMenu() {
+    content.innerHTML = '';
+    const menu = createMenu(PLACEHOLDER);
+    content.appendChild(menu);
+  }
 
-  title.classList.add('title');
-  title.textContent = 'Food';
+  function invokeContacts() {
+    content.innerHTML = '';
+    const contacts = createContacts();
+    content.appendChild(contacts);
+  }
+
+  const navigationTab = createNavigationTab(invokeMenu, invokeContacts);
+
+  document.body.appendChild(navigationTab);
+  document.body.appendChild(content);
+
+  content.classList.add('content');
+
+  invokeMenu();
 }
 
 init();
